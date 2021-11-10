@@ -1,2 +1,2 @@
-# PrettyWisee.github.io
+# Саша Підласко
 Мой первый сайт
