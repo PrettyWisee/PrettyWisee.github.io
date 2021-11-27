@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Андрей Браун - Веб-разработчик</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+  <div class="preloader">
+  <div class="preloader__row">
+    <div class="preloader__item"></div>
+    <div class="preloader__item"></div>
+  </div>
+</div>
+<script>
+  window.onload = function () {
+    document.body.classList.add('loaded');
+  }
+</script>
+<script>
+  window.onload = function () {
+    document.body.classList.add('loaded_hiding');
+    window.setTimeout(function () {
+      document.body.classList.add('loaded');
+      document.body.classList.remove('loaded_hiding');
+    }, 500);
+  }
+</script>
+<header>
+  <main>
+  <nav>
+    <div class="logo">Андрей Браун</div>
+    <div class="menu">
+      <ul>
+        <li><a href="#">Обо мне</a></li>
+        <li><a href="#">Услуги</a></li>
+        <li><a href="#">Кейсы</a></li>
+        <li><a href="#">Прайс</a></li>
+        <li><a href="#">Отзывы</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+<section class="main"><div class="title_container">
+  <h1>Привет <br>Я Андрей Браун</h1>
+<h4>Фулл стек веб-разработчтик</h4>
+<input type="button" value="Обо мне">
+  <input type="button" value="Мои работы">
+</div></section>
+<div class="me">
+<h2>ОБО МНЕ</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <br>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+<input type="submit" value="Скaчать резюме">
+</div>
+<div class="My_skills">
+<h2>ЧТО Я УМЕЮ</h2>
+<div class="My_skills1">
+<img src="./img\ноут.png" alt=""><h3>Веб-дизайн</h3><p>Lorem ipsum dolor sit <br> amet, consectetur adipisicing <br> elit, sed do </p>
+</div>
+<div class="My_skills2">
+<img src="./img\знак.png" alt=""><h4>Разработка</h4><p>Lorem ipsum dolor <br> sit amet, consectetur <br> adipisicing </p>
+</div>
+<div class="My_skills3">
+ <img src="img/ракета.png" alt=""><h5>СЕО-Оптимизация</h5><p>Lorem ipsum dolor <br> sit amet, consectetur <br> adipisicing elit, sed do <br> eiusmod tempor incididunt <br> ut labore et dolore magna aliqua.<br> Ut enim ad minim veniam,<br> quis nostrud exercitation ullamco </p>
+</div>
+<div class="My_skills4">
+ <img src="img/граммофон.png" alt=""><h6>Маркетинг</h6> <p>Lorem ipsum dolor sit amet, <br> consectetur adipisicing elit, sed do eiusmod tempor</p>
+</div>
+<div class="Cases">
+<h2>Кейсы</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<h3>Название проекта</h3>
+<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna <br> aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+<h5>CLIENT:</h5>
+<h6>Какая-то компания</h6>
+</div>
+<div class="b">
+<h2>WEBSITE:</h2>
+<h3>http://somedomain.com</h3>
+<a href="#">VISIT LIVE SITE</a>
+</div>
+<div class="a">
+<h2>Расчёт стоимости</h2>
+<h3>Тип сайта</h3>
+<select class="list1" name="list">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select>
+<h4>Дизайн</h3>
+<select class="list1" name="list">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select>
+<h5>Адаптивность</h3>
+<select class="list1" name="list">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select>
+<p>Сроки 0</p>
+<p>Стоимость 0</p>
+</div>
+
+<div class="Statistics">
+<h2>Немного статистики</h2>
+</div>
+<div class="Reviews">
+<h2>Отзывы</h2>
+<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore <br> magna aliqua. Ut enim ad minim veniam, quis nostrud exercita</h3>
+<p><b>Михаил,</b>Ген директор ПАО"Газпром".</p>
+</div>
+<footer>
+  <div class="Contacts">
+  <h2>МОИ КОНТАКТЫ</h2>
+  <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</h3>
+<h4><b>Санкт-Петербург <br>Невский проспект 11</b></h4>
+<p>Оставте мне сообщение</p>
+<input type="text" name="text-input" value="" placeholder="Имя">
+<input type="text" name="text-input" value="" placeholder="Email"><br>
+<textarea name="name" rows="8" cols="80" placeholder="Сообщение"></textarea><br>
+<input type="submit"value="Отправить">
+</div>
+<div class="map">
+
+</div>
+
+<div class="END">
+<p><b>Copiright 2021 Андрей Браун. Design by Web</b></p>
+</div>
+
+</footer>
+</body>
+</html>
