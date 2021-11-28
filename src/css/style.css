@@ -1,3 +1,73 @@
+
+.preloader {
+
+  position: fixed;
+
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  background: #e0e0e0;
+
+  z-index: 1001;
+}
+
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  background-color: #337ab7;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  animation: preloader-bounce 2s infinite ease-in-out;
+}
+
+.preloader__item:last-child {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1s;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader-bounce {
+
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
 body {
   font-family: Arial, sans-serif;
 }
@@ -5,6 +75,7 @@ body {
    width: 100%;
    height: 60px;
    background: #344051;
+   position: fixed;
  }
 .logo {
   color: #fff;
@@ -12,6 +83,9 @@ body {
   line-height: 60px;
   padding-left: 388px;
   float: left;
+  -webkit-animation: comming 2s ease;
+  -o-animation: comming 2s ease;
+  animation: comming 2s ease;
 }
 .menu{
 
@@ -27,10 +101,29 @@ float: left;
   text-transform: uppercase;
 padding-right: 10px;
 padding-top: 20px;
+-webkit-animation: top-shift 0.4s ease forwards;
+-o-animation: top-shift 0.4s ease forwards;
+animation: top-shift 0.4s ease forwards;
+opacity: 0;
+}
+.menu li a{
+transition: all 0.5s;
+color: white;
+transform:scale(1);
+display: inline-block;
+}
+.menu li a:visited{
+  color:white;
+}
+.menu li a:hover {
+  color: #e88604;
+}
+.menu li a:active{
+  transform: scale(1.1);
 }
 .main {
   width: 100%;
-  height:calc(100% - 60px);
+  height:100%;
   background:url(../img/парень.png) 90% 100%/ auto 85% no-repeat ,url(../img/фон.png) center/cover no-repeat;
 }
 .title_container {
@@ -38,6 +131,13 @@ padding-top: 20px;
   margin: 300px 0px 0px 404px;
   color: #2c384a;
   text-align: center;
+  opacity: 0;
+  -webkit-animation: titlemove 1s ease forwards;
+  -o-animation: titlemove 1s ease forwards;
+  animation: titlemove 1s ease forwards;
+  -webkit-animation-delay: 2s;
+  -o-animation-delay: 2s;
+  animation-delay: 2s;
 }
 .title_container h1 {
   font-size: 60px;
@@ -53,12 +153,71 @@ color: #79818d;
   text-align: center;
   border: 2px solid #6d7682;
   background: none;
-  border-radius: 10px;
+  border-radius: 5px;
   color: #6d7682;
   font-size: 13px;
   padding: 0px 16px;
   margin-top: 58px 14px 0px 14px;
+  animation: pulse;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+
 }
+.title_container input {
+  transition: all 0.2s;
+  transform: scale(1);
+}
+.title_container input:hover {
+background: #344051;
+color:white;
+}
+.title_container input:active{
+transform: scale(1.1);
+}
+@keyframes comming {
+ from{
+  opacity: 0;
+}
+ to{
+  opacity: 1;
+}
+}
+@keyframes top-shift{
+from{
+opacity: 0;
+margin-left: -80px;
+}
+to{
+opacity: 1;
+margin-left: 0px;
+}
+}
+.menu li:nth-child(2){
+  animation-delay: 0.4s;
+}
+.menu li:nth-child(3){
+  animation-delay: 0.8s;
+}
+.menu li:nth-child(4){
+  animation-delay: 1.2s;
+}
+.menu li:nth-child(5){
+  animation-delay: 1.6s;
+}
+.menu li:nth-child(6){
+  animation-delay: 2s;
+}
+@keyframes titlemove{
+from{
+opacity: 0;
+margin-left: -500px;
+}
+to{
+opacity: 1;
+margin-left: 404px;
+}
+}
+
 .me h2   {
   height: 300px;
   box-shadow: white;
@@ -67,6 +226,9 @@ color: #79818d;
   font-size: 30px;
   background: url("../img/Черта-заголовка.png") 50% 10% no-repeat,url("../img/фотка.png") 50% 60% no-repeat;
   font-weight: bold;
+  z-index: 2;
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
 
 
 }
@@ -88,13 +250,27 @@ color: #79818d;
   box-shadow: white;
   height: 30px;
   background: url("../img/иконка.png") 1% 50% no-repeat;
+  animation: shakeX;
+  animation-duration: 15s;
+}
+.me input {
+  transition: all 0.2s;
+  transform: scale(1);
+}
+.me input:hover {
+color:black;
+background: white;
+}
+.me input:active{
+transform: scale(1.1);
 }
 
 
 .My_skills  {
   box-shadow: white;
   height: 505px;
-  background:url("../img/ноут.png") 20% 50% no-repeat,url("../img/знак.png") 35% 50% no-repeat,url("../img/ракета.png") 60% 50% no-repeat,url("../img/граммофон.png") 75% 50% no-repeat,url("../img/Черта-заголовка.png") 50% 10% no-repeat,url("../img/картинка фона.png") no-repeat;
+  background:url("../img/Черта-заголовка.png") 50% 10% no-repeat,url("../img/картинка фона.png") no-repeat;
+
 }
 .My_skills h2{
   text-align: center;
@@ -102,56 +278,96 @@ color: #79818d;
   font-size: 30px;
   font-weight: bold;
 }
-
-.My_skills br {
-  padding-left: 280px;
-  padding-top: 270px;
-  color: black;
+.My_skills1{
+  float: left;
+  width: 380px;
+  text-align: center;
+  margin-top: 250px;
 }
 
-.My_skills h3 {
-  padding-left: 280px;
-  padding-top: 270px;
+.My_skills1 h3 {
   font-weight: bold;
   color: darkorange;
   font-size: 15px;
-  float: left;
+padding-top: 10px;
 }
-.My_skills br {   /* Без понятия как сделать 2 разных цвета текста*/
-  padding-left: 280px;
-  padding-top: 270px;
-  color: black;
+.My_skills1 p {
+
+  font-weight: bold;
+  color: #243042;
+  font-size: 10px;
+
+
+}
+.My_skills2{
+  float: left;
+  width: 380px;
+  text-align: center;
+  margin-top: 250px;
 }
 
-.My_skills h4 {
-  padding-left: 15px;
-  padding-top: 270px;
+.My_skills2 h4 {
+ padding-top: 10px;
   font-weight: bold;
   color: darkorange;
   font-size: 15px;
+
+}
+.My_skills2 p{
+  font-weight: bold;
+  color: #243042;
+  font-size: 10px;
+
+}
+.My_skills3{
   float: left;
+  width: 380px;
+  text-align: center;
+  margin-top: 250px;
 }
-.My_skills h5 {
-  padding-left: 840px;
-  margin-top: 270px;
+.My_skills3 h5 {
+padding-top: 10px;
   font-weight: bold;
   color: darkorange;
+
+
 }
-.My_skills h6 {
-  padding-left: 1100px; /* так же не знаю уже как его поднять на нужную высоту */
-  margin-bottom: 100px;
+.My_skills3 p{
+
+  font-weight: bold;
+  color: #243042;
+  font-size: 10px;
+
+}
+My_skills4{
+  float: left;
+  width: 300px;
+  text-align: center;
+  padding-top: 250px;
+}
+My_skills4 img{
+  padding-top: 200px;
+}
+.My_skills4 h6 {
+
   font-weight: bold;
   color: darkorange;
+padding-top: 260px;
+}
+.My_skills4 p {
+  font-size: 10px;
+  font-weight: bold;
+  color: #243042;
 }
 .Cases h2 {
   color: #384354;
-  padding-top: 111px;
+  padding-top: 211px;
   text-align: center;
   font-size: 30px;
   font-weight: bold;
   box-shadow: white;
   height: 300px;
-  background: url("../img/Черта-заголовка.png") 50% 60% no-repeat
+  background: url("../img/Черта-заголовка.png") 50% 90% no-repeat
 }
 .Cases p {
 text-align: center;
@@ -171,6 +387,9 @@ height: 860px;
   padding-left: 650px;
   padding-top: 10px;
   color: #3f495a;
+  animation: pulse;
+ animation-duration: 3s;
+ animation-iteration-count: infinite;
 
 
 }
@@ -197,22 +416,26 @@ color: #384354;
   padding-left: 500px;
   color: #384354;
 }
-.b h4 {
-  margin-left: 500px; /* Тоже подогнать по размерам не могу*/
-  margin-top: 20px;
+.b a {
+  margin-left: 400px; /* Тоже подогнать по размерам не могу*/
+  margin-top: 60px;
   color: white;
   border: 3px solid white;
   border-radius: 10px;
-  padding: 5px 3px 3px 5px;
-  height: 30px 30px 20px 20px ;
+  margin: 5px 5px 5px 5px;
+  height: 15px 15px 15px 15px ;
   background-color: #63b5ae;
-  border-right: 900px solid;
+}
+.b a:hover {
+color:white;
+background: black;
 }
 .a h2 {
   text-align:center;
   margin-top: 203px;
   font-size: 30px;
   font-weight: bold;
+
 }
 .a h3 {
   padding-left: 500px;
@@ -220,9 +443,10 @@ color: #384354;
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
+  color: black;
 }
 .a select {
-  padding-left: 1000px;
+  margin-left: 1000px;
 
 }
 .a h4 {
@@ -230,12 +454,14 @@ color: #384354;
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
+  color: black;
 }
 .a h5 {
   padding-left: 500px;
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
+  color: black;
 }
 .a p {
   padding-left: 500px;
@@ -248,6 +474,9 @@ color: #384354;
   height: 500px;
   margin-top: 200px;
   background:url("../img/23  НАГРАД ПОЛУЧЕНО .png") 81.5% 70% no-repeat,url("../img/340  ПРОЕКТОВ ЗАВЕРШЕНО .png") 60.5% 70% no-repeat,url("../img/4,600  ЧАСОВ РАБОТЫ .png") 39.5% 70% no-repeat,url("../img/120  СЧАСТЛИВЫХ КЛИЕНТОВ .png") 17.5% 70% no-repeat,url("../img/кубок.png") 80% 50% no-repeat,url("../img/галочка.png") 60% 50% no-repeat ,url("../img/скобки.png") 40% 50% no-repeat,url("../img/смайл.png") 20% 50% no-repeat,url("../img/Черта-заголовка.png") 50% 20% no-repeat ,url("../img/фон 2.png") no-repeat;
+  background-attachment: fixed;
+
+
 }
 .Statistics h2 {
   padding-top: 50px;
@@ -263,19 +492,20 @@ color: #384354;
   font-size: 30px;
   color: #243042;
   box-shadow: white;
-  height: 250px;
-  background:url("../img/фотка 1.png") 50% 60% no-repeat,url("../img/Черта-заголовка.png") 50% 20% no-repeat;
+  height: 200px;
+  background:url("../img/фотка 1.png") 50% 100% no-repeat,url("../img/Черта-заголовка.png") 50% 20% no-repeat;
 }
 .Reviews h3 {
-  text-align: center;
+  text-align: center ;
   color: #243042;
+margin-bottom: 250px;
 }
 .Reviews p {
   text-align: center;
-  padding-top: 30px;
+  margin-top: 450px;
   color: #243042;
   box-shadow: white;
-  height: 80px;
+  height: 10px;
   background:url("../img/Оранж копия.png") 51.5% 100% no-repeat,url("../img/Оранж копия.png") 50% 100% no-repeat,url("../img/Оранж.png") 48.5% 100% no-repeat;
 }
 .Contacts {
@@ -305,15 +535,21 @@ color: #384354;
   color: white;
   text-align: center;
   font-size: 25px;
-  padding-top: 50px;
+  padding-top: 200px;
 }
 .Contacts textarea {
   margin-top: 80px;
   margin-left: 500px;
 }
 .Contacts input {
-  margin-left: 400px;
-  margin-top: 50px;
+
+  margin-top: 200px;
+}
+
+.map {
+  box-shadow: white;
+  height: 350px;
+  background: url("../img/Карта копия.png") no-repeat;
 }
 .END p{
   width: 100%;
