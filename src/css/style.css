@@ -128,7 +128,6 @@ transform: scale(1.1);
   background: rgba(0,0,0,0.4)
 }
 }
-
  from{
   opacity: 0;
 }
@@ -214,8 +213,8 @@ background: white;
 transform: scale(1.1);
 }
 .My_skills  {
-  box-shadow: white;
-  height: 522px;
+  width:100%;
+  height:100%;
   background:url("../img/Черта-заголовка.png") 50% 20% no-repeat,url("../img/картинка фона.png") no-repeat;
   margin-top: 100px;
 }
@@ -226,26 +225,280 @@ transform: scale(1.1);
     font-weight: bold;
   }
   .My_skills1{
-    float: left;
-
     text-align: center;
-    margin-top: 210px;
+
   }
   .My_skills2{
-    float: left;
-
     text-align: center;
-    margin-top: 210px;
+
   }
   .My_skills3{
-    float: left;
-
     text-align: center;
-    margin-top: 210px;
+
   }
   .My_skills4{
-    float: left;
-
     text-align: center;
-    margin-top: 210px;
+
   }
+  .My_skills h3 {
+    font-weight: bold;
+    color: darkorange;
+    font-size: 15px;
+  padding-top: 20px;
+}
+  .My_skills h4 {
+   padding-top: 20px;
+    font-weight: bold;
+    color: darkorange;
+    font-size: 15px;
+
+  }
+.My_skills img{
+  margin-top:200px;
+}
+  .My_skills h5 {
+  padding-top: 20px;
+    font-weight: bold;
+    color: darkorange;
+  }
+  .My_skills p{
+    font-weight: bold;
+    color: #243042;
+    font-size: 10px;
+  }
+  .My_skills h6 {
+    padding-top: 20px;
+    font-weight: bold;
+    color: darkorange;
+  }
+  .Cases h2 {
+    color: #384354;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    box-shadow: white;
+    height: 100px;
+    background: url("../img/Черта-заголовка.png") 50% 90% no-repeat;
+    margin-top: 108px;
+  }
+  .Cases p {
+  color: #3f495a;
+  }
+  .Cases h4 {
+    color: #3f495a;
+    /*animation: pulse;
+   animation-duration: 3s;
+   animation-iteration-count: infinite;*/
+  }
+  .Cases h5 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #384354;
+  }
+  .Cases h6 {
+    color: #384354;
+  }
+  .Cases a {
+  color: white;
+ border: 3px solid white;
+  height: 40px;
+  width: 150px;
+  text-align: center;
+  border-radius: 7px;
+  font-size: 13px;
+  padding: 7px;
+  background-color: #63b5ae;
+  font-weight: bold;
+  text-decoration: none;
+  float: left;
+  }
+  .Cases a:hover {
+  color:white;
+  background: black;
+  }
+  .a{
+    box-shadow: 2px 2px 2px 5px rgba(0,0,0,0.1);
+    background: white;
+    padding: 10px;
+    margin-top:150px;
+    width: 775px;
+    height: 550px;
+    margin-left: 370px;
+  }
+  .a h2 {
+    text-align:center;
+    margin-top
+    font-size: 30px;
+    font-weight: bold;
+
+  }
+  .a h3 {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    margin-top:50px;
+  }
+  .a input {
+    color: white;
+    border: 3px solid white;
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    border-radius: 7px;
+    font-size: 13px;
+    padding: 7px;
+    background-color: #63b5ae;
+    font-weight: bold;
+    margin-left:290px;
+    animation: pulse;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  .a input:hover{
+  color:white;
+  background: black;
+  }
+  .a h4 {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    margin-top:50px;
+  }
+  .a h5 {
+
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    margin-top:50px;
+  }
+  .a p {
+
+    color: #1c2534;
+    font-weight: bold;
+  }
+  .Statistics {
+    box-shadow: white;
+    height: 500px;
+    margin-top: 200px;
+    background:url("../img/Черта-заголовка.png") 50% 20% no-repeat ,url("../img/фон 2.png") no-repeat;
+    background-attachment: fixed;
+  }
+  .Statistics h2 {
+    color: #323e4f;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .Statistics h3{
+    color: #323e4f;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .Statistics p{
+    color: #323e4f;
+    font-size: 15px;
+  }
+  .Statistics img{
+    margin-top: 250px;
+  }
+  .Statistics h4{
+    color: #323e4f;
+    font-weight: bold;
+    font-size: 30px;
+}
+.Statistics h5{
+  color: #323e4f;
+  font-weight: bold;
+  font-size: 30px;
+}
+.Statistics h6{
+  color: #323e4f;
+  font-weight: bold;
+  font-size: 30px;
+}
+.Reviews{
+  box-shadow: white;
+  height: 590px;
+  background:url("../img/фотка 1.png") 50% 30% no-repeat,url("../img/Черта-заголовка.png") 50% 15% no-repeat;
+}
+.Reviews h3 {
+  color: #243042;
+margin-top: 200px;
+font-size: 15px;
+}
+.Reviews p{
+color: #243042;
+margin-top: 20px;
+font-size: 15px;
+}
+.Reviews h2{
+  margin-top: 50px;
+  color: #243042;
+  font-weight: bold;
+}
+.Contacts{
+  box-shadow: white;
+  height: 811px;
+  background:url("../img/Черта-заголовка.png") 50% 10% no-repeat,url("../img/Фон 3.png") no-repeat;
+}
+.Contacts h2{
+  color: white;
+  font-size: 30px;
+  margin-top: 40px;
+}
+.Contacts h3{
+  color: white;
+  font-size: 20px;
+  margin-top: 35px;
+}
+.Contacts h4 {
+  color:white;
+font-size: 20px;
+}
+.Contacts h5 {
+  color:white;
+font-size: 20px;
+}
+.Contacts h6 {
+  color:white;
+font-size: 20px;
+}
+.Contacts img{
+  margin-top:40px;
+}
+.Contacts p{
+  color:white;
+  font-size: 35px;
+  margin-top:45px;
+}
+.Contacts input{
+  color: white;
+  border: 3px solid white;
+  height: 40px;
+  width: 150px;
+  text-align: center;
+  border-radius: 7px;
+  font-size: 13px;
+  padding: 7px;
+  background: none;
+  font-weight: bold;
+
+  animation: pulse;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+.map {
+  box-shadow: white;
+  height: 350px;
+  background: url("../img/Карта копия.png") no-repeat;
+}
+.END p{
+  width: 100%;
+  height: 60px;
+  background: #344051;
+  text-align: center;
+  color: white;
+  padding-top: 30px;
+}
