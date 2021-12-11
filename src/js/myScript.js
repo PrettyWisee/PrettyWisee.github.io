@@ -1,33 +1,11 @@
 "use strict"
 
-var siteType = {a:"10",b:"20",c:"30"};
-
-
-var siteType = ("a");
-
-if (siteType == "a") {
-  console.log(10);
-}
-
-else {
-console.log(0);
-}
-
-if (siteType == "b") {
-  console.log(20);
-}
-else {
-  console.log(0);
-}
-
-if (siteType == "c") {
- console.log(0);
-}
+var siteType = {b:"a",a:"b",c:"c"};
 
 let Design = {
-  a:  5,
-  b: 10,
-  c: 15,
+  a:  "a",
+  b: "b",
+  c: "c",
 };
 console.log(Design);
 let Adaptability = {
@@ -36,10 +14,40 @@ let Adaptability = {
   c: 3,
 };
 console.log(Adaptability);
+let sum = 0;
+
 
 let siteTypetwo = prompt ("siteType","a,b,c")
+if (siteType == "a"){
+  sum = sum + 100;
+}
+else if (siteType == "b") {
+  sum = sum + 50;
+} else if (siteType == "c"){
+sum == sum + 10;
+};
+console.log(siteTypetwo);
 
-console.log(siteTypetwo)
 
-prompt("Design","a,b,c");
-prompt("Adaptability","a,b,c");
+let DesignTwo = prompt("Design","a,b,c")
+if (Design == "a"){
+  sum = sum + 300;
+}
+else if (Design == "b") {
+  sum = sum + 540;
+} else if (Design == "c"){
+sum == sum + 170;
+};
+console.log(Design);
+
+let AdaptabilityTwo = prompt("Adaptability","1,2,3")
+if (Adaptability == "1"){
+  sum = sum + 600;
+}
+else if (Adaptability == "2") {
+  sum = sum + 940;
+} else if (Adaptability == "3"){
+sum == sum + 270;
+};
+
+console.log(sum);
