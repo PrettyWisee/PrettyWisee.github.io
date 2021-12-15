@@ -1,6 +1,7 @@
 body {
   font-family: Arial, sans-serif;
 }
+
 nav {
   width: 100%;
   height: 60px;
@@ -8,61 +9,72 @@ nav {
   position: fixed;
   z-index: 10;
 }
+
 .logo {
   color: #fff;
   font-size: 28px;
   line-height: 60px;
   float: left;
-/*  -webkit-animation: comming 2s ease;
+  /*  -webkit-animation: comming 2s ease;
   -o-animation: comming 2s ease;
   animation: comming 2s ease;*/
 }
-.menu{
-float: left;
+
+.menu {
+  float: left;
 }
+
 .menu li {
-  float:left;
+  float: left;
   line-height: 20px;
   padding-top: 20px;
   color: white;
-  margin-right:30px;
+  margin-right: 30px;
   font-size: 16px;
   text-transform: uppercase;
--webkit-animation: top-shift 0.4s ease forwards;
--o-animation: top-shift 0.4s ease forwards;
-animation: top-shift 0.4s ease forwards;
-list-style-type: none;
+  -webkit-animation: top-shift 0.4s ease forwards;
+  -o-animation: top-shift 0.4s ease forwards;
+  animation: top-shift 0.4s ease forwards;
+  list-style-type: none;
 }
-.menu li a{
-transition: all 0.5s;
-color: white;
-transform:scale(1);
-display: inline-block;
-text-decoration: none;
+
+.menu li a {
+  transition: all 0.5s;
+  color: white;
+  transform: scale(1);
+  display: inline-block;
+  text-decoration: none;
 }
-.menu li a:visited{
-  color:white;
+
+.menu li a:visited {
+  color: white;
 }
+
 .menu li a:hover {
   color: #e88604;
 }
-.menu li a:active{
+
+.menu li a:active {
   transform: scale(1.1);
+  color:#e88604;
 }
+
 .main {
-  width:100%;
-  height:100%;
-  background:url(../img/Парень.png) 90% 100%/ auto 85% no-repeat,url(../img/фон.png) center/cover no-repeat;
+  width: 100%;
+  height: 100%;
+  background: url(../img/Парень.png) 90% 100%/ auto 85% no-repeat, url(../img/фон.png) center/cover no-repeat;
 }
-.white-btn:visited{
-  color:white;
+
+.white-btn:visited {
+  color: white;
 }
+
 .title_container {
   float: left;
   color: #2c384a;
   text-align: center;
   width: 100%;
-opacity: 0;
+  opacity: 0;
   -webkit-animation: titlemove 1s ease forwards;
   -o-animation: titlemove 1s ease forwards;
   animation: titlemove 1s ease forwards;
@@ -70,6 +82,7 @@ opacity: 0;
   -o-animation-delay: 2s;
   animation-delay: 2s;
 }
+
 .title_container h1 {
   font-size: 70px;
   font-weight: bold;
@@ -77,10 +90,12 @@ opacity: 0;
   font-weight: 600;
   margin-top: 215px;
 }
+
 .title_container h4 {
-font-size: 22px;
-color: #79818d;
+  font-size: 22px;
+  color: #79818d;
 }
+
 .title_container input {
   height: 40px;
   text-align: center;
@@ -95,99 +110,120 @@ color: #79818d;
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
+
 .title_container input {
   transition: all 0.2s;
   transform: scale(1);
 }
+
 .title_container input:hover {
-background: #344051;
-color:white;
+  background: #344051;
+  color: white;
 }
-.title_container input:active{
-transform: scale(1.1);
+
+.title_container input:active {
+  transform: scale(1.1);
 }
-@media (max-width:991px){
-  .title_container , .title_container h4,.title_container input{
-    color:white;
+
+@media (max-width:991px) {
+  .title_container, .title_container h4, .title_container input {
+    color: white;
     position: relative;
     z-index: 3;
   }
-  .title_container input{
-  border: 2px solid white;
+
+  .title_container input {
+    border: 2px solid white;
+  }
+
+  .main {
+    position: relative;
+  }
+
+  .main::after {
+    content: "";
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4)
+  }
 }
-.main{
-  position: relative;
-}
-.main::after{
-  content:"";
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
-  background: rgba(0,0,0,0.4)
-}
-}
- from{
+
+from {
   opacity: 0;
 }
- to{
+
+to {
   opacity: 1;
 }
 }
-@keyframes top-shift{
-from{
-opacity: 0;
-margin-left: -80px;
+
+@keyframes top-shift {
+  from {
+    opacity: 0;
+    margin-left: -80px;
+  }
+
+  to {
+    opacity: 1;
+    margin-left: 0px;
+  }
 }
-to{
-opacity: 1;
-margin-left: 0px;
-}
-}
-.menu li:nth-child(2){
+
+.menu li:nth-child(2) {
   animation-delay: 0.4s;
 }
-.menu li:nth-child(3){
+
+.menu li:nth-child(3) {
   animation-delay: 0.8s;
 }
-.menu li:nth-child(4){
+
+.menu li:nth-child(4) {
   animation-delay: 1.2s;
 }
-.menu li:nth-child(5){
+
+.menu li:nth-child(5) {
   animation-delay: 1.6s;
 }
-.menu li:nth-child(6){
+
+.menu li:nth-child(6) {
   animation-delay: 2s;
 }
-@keyframes titlemove{
-from{
-opacity: 0;
-margin-left: -500px;
+
+@keyframes titlemove {
+  from {
+    opacity: 0;
+    margin-left: -500px;
+  }
+
+  to {
+    opacity: 1;
+    margin-left: 0px;
+  }
 }
-to{
-opacity: 1;
-margin-left: 0px;
-}
-}
-.me h2   {
+
+.me h2 {
   height: 300px;
   box-shadow: white;
   margin-top: 100px;
   text-align: center;
   font-size: 30px;
-  background: url("../img/Черта-заголовка.png") 50% 20% no-repeat,url("../img/фотка.png") 50% 100% no-repeat;
+  background: url("../img/Черта-заголовка.png") 50% 20% no-repeat, url("../img/фотка.png") 50% 100% no-repeat;
   font-weight: bold;
   z-index: 2;
   transform: rotateY(0deg);
   backface-visibility: hidden;
 }
+
 .me p {
   text-align: center;
   font-size: 10px;
   color: #6d7682;
- padding-top: 10px;
+  padding-top: 10px;
 }
+
 .me input {
   margin-top: 20px;
   margin-left: 10px;
@@ -201,106 +237,122 @@ margin-left: 0px;
   animation: shakeX;
   animation-duration: 15s;
 }
+
 .me input {
   transition: all 0.2s;
   transform: scale(1);
 }
+
 .me input:hover {
-color:black;
-background: white;
+  color: black;
+  background: white;
 }
-.me input:active{
-transform: scale(1.1);
+
+.me input:active {
+  transform: scale(1.1);
 }
-.My_skills  {
-  width:100%;
-  height:100%;
-  background:url("../img/Черта-заголовка.png") 50% 20% no-repeat,url("../img/картинка фона.png") no-repeat;
+
+.My_skills {
+  width: 100%;
+  height: 100%;
+  background: url("../img/Черта-заголовка.png") 50% 20% no-repeat, url("../img/картинка фона.png") no-repeat;
   margin-top: 100px;
 }
-  .My_skills h2{
-    text-align: center;
-    margin-top: 50px;
-    font-size: 30px;
-    font-weight: bold;
-  }
-  .My_skills1{
-    text-align: center;
 
-  }
-  .My_skills2{
-    text-align: center;
+.My_skills h2 {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 30px;
+  font-weight: bold;
+}
 
-  }
-  .My_skills3{
-    text-align: center;
+.My_skills1 {
+  text-align: center;
+}
 
-  }
-  .My_skills4{
-    text-align: center;
+.My_skills2 {
+  text-align: center;
+}
 
-  }
-  .My_skills h3 {
-    font-weight: bold;
-    color: darkorange;
-    font-size: 15px;
+.My_skills3 {
+  text-align: center;
+}
+
+.My_skills4 {
+  text-align: center;
+}
+
+.My_skills h3 {
+  font-weight: bold;
+  color: darkorange;
+  font-size: 15px;
   padding-top: 20px;
 }
-  .My_skills h4 {
-   padding-top: 20px;
-    font-weight: bold;
-    color: darkorange;
-    font-size: 15px;
 
-  }
-.My_skills img{
-  margin-top:200px;
-}
-  .My_skills h5 {
+.My_skills h4 {
   padding-top: 20px;
-    font-weight: bold;
-    color: darkorange;
-  }
-  .My_skills p{
-    font-weight: bold;
-    color: #243042;
-    font-size: 10px;
-  }
-  .My_skills h6 {
-    padding-top: 20px;
-    font-weight: bold;
-    color: darkorange;
-  }
-  .Cases h2 {
-    color: #384354;
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    box-shadow: white;
-    height: 100px;
-    background: url("../img/Черта-заголовка.png") 50% 90% no-repeat;
-    margin-top: 108px;
-  }
-  .Cases p {
+  font-weight: bold;
+  color: darkorange;
+  font-size: 15px;
+}
+
+.My_skills img {
+  margin-top: 200px;
+}
+
+.My_skills h5 {
+  padding-top: 20px;
+  font-weight: bold;
+  color: darkorange;
+}
+
+.My_skills p {
+  font-weight: bold;
+  color: #243042;
+  font-size: 10px;
+}
+
+.My_skills h6 {
+  padding-top: 20px;
+  font-weight: bold;
+  color: darkorange;
+}
+
+.Cases h2 {
+  color: #384354;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  box-shadow: white;
+  height: 100px;
+  background: url("../img/Черта-заголовка.png") 50% 90% no-repeat;
+  margin-top: 108px;
+}
+
+.Cases p {
   color: #3f495a;
-  }
-  .Cases h4 {
-    color: #3f495a;
-    /*animation: pulse;
+}
+
+.Cases h4 {
+  color: #3f495a;
+  /*animation: pulse;
    animation-duration: 3s;
    animation-iteration-count: infinite;*/
-  }
-  .Cases h5 {
+}
+
+.Cases h5 {
   font-size: 30px;
   font-weight: bold;
   color: #384354;
-  }
-  .Cases h6 {
-    color: #384354;
-  }
-  .Cases a {
+}
+
+.Cases h6 {
+  color: #384354;
+}
+
+.Cases a {
   color: white;
- border: 3px solid white;
+  border: 3px solid white;
   height: 40px;
   width: 150px;
   text-align: center;
@@ -311,169 +363,195 @@ transform: scale(1.1);
   font-weight: bold;
   text-decoration: none;
   float: left;
-  }
-  .Cases a:hover {
-  color:white;
-  background: black;
-  }
-  .a{
-    box-shadow: 2px 2px 2px 5px rgba(0,0,0,0.1);
-    background: white;
-    padding: 10px;
-    margin-top:150px;
-    width: 775px;
-    height: 550px;
-    margin-left: 370px;
-  }
-  .a h2 {
-    text-align:center;
-    margin-top
-    font-size: 30px;
-    font-weight: bold;
-
-  }
-  .a h3 {
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: black;
-    margin-top:50px;
-  }
-  .a input {
-    color: white;
-    border: 3px solid white;
-    height: 40px;
-    width: 150px;
-    text-align: center;
-    border-radius: 7px;
-    font-size: 13px;
-    padding: 7px;
-    background-color: #63b5ae;
-    font-weight: bold;
-    margin-left:290px;
-    animation: pulse;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-  }
-  .a input:hover{
-  color:white;
-  background: black;
-  }
-  .a h4 {
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: black;
-    margin-top:50px;
-  }
-  .a h5 {
-
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: black;
-    margin-top:50px;
-  }
-  .a p {
-
-    color: #1c2534;
-    font-weight: bold;
-  }
-  .Statistics {
-    box-shadow: white;
-    height: 500px;
-    margin-top: 200px;
-    background:url("../img/Черта-заголовка.png") 50% 20% no-repeat ,url("../img/фон 2.png") no-repeat;
-    background-attachment: fixed;
-  }
-  .Statistics h2 {
-    color: #323e4f;
-    font-weight: bold;
-    font-size: 30px;
-  }
-  .Statistics h3{
-    color: #323e4f;
-    font-weight: bold;
-    font-size: 30px;
-  }
-  .Statistics p{
-    color: #323e4f;
-    font-size: 15px;
-  }
-  .Statistics img{
-    margin-top: 250px;
-  }
-  .Statistics h4{
-    color: #323e4f;
-    font-weight: bold;
-    font-size: 30px;
 }
-.Statistics h5{
+
+.Cases a:hover {
+  color: white;
+  background: black;
+}
+
+.a {
+  box-shadow: 2px 2px 2px 5px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 10px;
+  margin-top: 150px;
+  width: 775px;
+  height: 550px;
+  margin-left: 370px;
+}
+
+.a h2 {
+  text-align: center;
+  margin-top font-size: 30px;
+  font-weight: bold;
+}
+
+.a h3 {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  margin-top: 50px;
+}
+
+.a input {
+  color: white;
+  border: 3px solid white;
+  height: 40px;
+  width: 150px;
+  text-align: center;
+  border-radius: 7px;
+  font-size: 13px;
+  padding: 7px;
+  background-color: #63b5ae;
+  font-weight: bold;
+  margin-left: 290px;
+  animation: pulse;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.a input:hover {
+  color: white;
+  background: black;
+}
+
+.a h4 {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  margin-top: 50px;
+}
+
+.a h5 {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  margin-top: 50px;
+}
+
+.a p {
+  color: #1c2534;
+  font-weight: bold;
+}
+
+.Statistics {
+  box-shadow: white;
+  height: 500px;
+  margin-top: 200px;
+  background: url("../img/Черта-заголовка.png") 50% 20% no-repeat, url("../img/фон 2.png") no-repeat;
+  background-attachment: fixed;
+}
+
+.Statistics h2 {
   color: #323e4f;
   font-weight: bold;
   font-size: 30px;
 }
-.Statistics h6{
+
+.Statistics h3 {
   color: #323e4f;
   font-weight: bold;
   font-size: 30px;
 }
-.Reviews{
+
+.Statistics p {
+  color: #323e4f;
+  font-size: 15px;
+}
+
+.Statistics img {
+  margin-top: 250px;
+}
+
+.Statistics h4 {
+  color: #323e4f;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.Statistics h5 {
+  color: #323e4f;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.Statistics h6 {
+  color: #323e4f;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.Reviews {
   box-shadow: white;
   height: 590px;
-  background:url("../img/фотка 1.png") 50% 30% no-repeat,url("../img/Черта-заголовка.png") 50% 15% no-repeat;
+  background: url("../img/фотка 1.png") 50% 30% no-repeat, url("../img/Черта-заголовка.png") 50% 15% no-repeat;
 }
+
 .Reviews h3 {
   color: #243042;
-margin-top: 200px;
-font-size: 15px;
+  margin-top: 200px;
+  font-size: 15px;
 }
-.Reviews p{
-color: #243042;
-margin-top: 20px;
-font-size: 15px;
+
+.Reviews p {
+  color: #243042;
+  margin-top: 20px;
+  font-size: 15px;
 }
-.Reviews h2{
+
+.Reviews h2 {
   margin-top: 50px;
   color: #243042;
   font-weight: bold;
 }
-.Contacts{
+
+.Contacts {
   box-shadow: white;
   height: 811px;
-  background:url("../img/Черта-заголовка.png") 50% 10% no-repeat,url("../img/Фон 3.png") no-repeat;
+  background: url("../img/Черта-заголовка.png") 50% 10% no-repeat, url("../img/Фон 3.png") no-repeat;
 }
-.Contacts h2{
+
+.Contacts h2 {
   color: white;
   font-size: 30px;
   margin-top: 40px;
 }
-.Contacts h3{
+
+.Contacts h3 {
   color: white;
   font-size: 20px;
   margin-top: 35px;
 }
+
 .Contacts h4 {
-  color:white;
-font-size: 20px;
+  color: white;
+  font-size: 20px;
 }
+
 .Contacts h5 {
-  color:white;
-font-size: 20px;
+  color: white;
+  font-size: 20px;
 }
+
 .Contacts h6 {
-  color:white;
-font-size: 20px;
+  color: white;
+  font-size: 20px;
 }
-.Contacts img{
-  margin-top:40px;
+
+.Contacts img {
+  margin-top: 40px;
 }
-.Contacts p{
-  color:white;
+
+.Contacts p {
+  color: white;
   font-size: 35px;
-  margin-top:45px;
+  margin-top: 45px;
 }
-.Contacts input{
+
+.Contacts input {
   color: white;
   border: 3px solid white;
   height: 40px;
@@ -484,17 +562,18 @@ font-size: 20px;
   padding: 7px;
   background: none;
   font-weight: bold;
-
   animation: pulse;
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
+
 .map {
   box-shadow: white;
   height: 350px;
   background: url("../img/Карта копия.png") no-repeat;
 }
-.END p{
+
+.END p {
   width: 100%;
   height: 60px;
   background: #344051;
