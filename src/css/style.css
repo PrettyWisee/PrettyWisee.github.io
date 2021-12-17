@@ -108,7 +108,7 @@ nav {
   margin-top: 58px 14px 0px 14px;
   animation: pulse;
   animation-duration: 3s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 3s;
 }
 
 .title_container input {
@@ -408,7 +408,7 @@ to {
   margin-left: 290px;
   animation: pulse;
   animation-duration: 3s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 3s;
 }
 
 .a input:hover {
@@ -442,7 +442,7 @@ to {
   height: 500px;
   margin-top: 200px;
   background: url("../img/Черта-заголовка.png") 50% 20% no-repeat, url("../img/фон 2.png") no-repeat;
-  background-attachment: fixed;
+
 }
 
 .Statistics h2 {
@@ -455,11 +455,17 @@ to {
   color: #323e4f;
   font-weight: bold;
   font-size: 30px;
+  animation: fadeInDown;
+  animation-duration: 2s;
+  animation-iteration-count: 2s;
 }
 
 .Statistics p {
   color: #323e4f;
   font-size: 15px;
+  animation: fadeInUp;
+  animation-duration: 2s;
+  animation-iteration-count: 2s;
 }
 
 .Statistics img {
@@ -470,18 +476,27 @@ to {
   color: #323e4f;
   font-weight: bold;
   font-size: 30px;
+  animation: fadeInDown;
+  animation-duration: 2s;
+  animation-iteration-count: 2s;
 }
 
 .Statistics h5 {
   color: #323e4f;
   font-weight: bold;
   font-size: 30px;
+  animation: fadeInDown;
+  animation-duration: 2s;
+  animation-iteration-count: 2s;
 }
 
 .Statistics h6 {
   color: #323e4f;
   font-weight: bold;
   font-size: 30px;
+  animation: fadeInDown;
+  animation-duration: 2s;
+  animation-iteration-count: 2s;
 }
 
 .Reviews {
@@ -551,7 +566,30 @@ to {
   margin-top: 45px;
 }
 
-.Contacts input {
+.element-animation{
+  opacity: 0;
+
+}
+
+.animationShow{
+  color: white;
+  border: 3px solid white;
+  height: 40px;
+  width: 150px;
+  text-align: center;
+  border-radius: 7px;
+  font-size: 13px;
+  padding: 7px;
+  background: none;
+  font-weight: bold;
+  opacity: 1;
+  animation: pulse;
+  animation-duration: 3s;
+  animation-iteration-count: 3s;
+
+}
+/*
+.Contacts input{
   color: white;
   border: 3px solid white;
   height: 40px;
@@ -564,8 +602,9 @@ to {
   font-weight: bold;
   animation: pulse;
   animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
+  animation-iteration-count: 3s;
+
+}*/
 
 .map {
   box-shadow: white;
@@ -580,4 +619,12 @@ to {
   text-align: center;
   color: white;
   padding-top: 30px;
+}
+.carousel-inner{
+  max-width: 300px;
+  max-height: 300px;
+}
+.carouselExampleFade{
+  max-width: 300px;
+  max-height: 300px;
 }

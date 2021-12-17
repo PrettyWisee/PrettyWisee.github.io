@@ -1,4 +1,3 @@
-"use strict"
 $(document).ready(function() {
   $(window).scroll(() => {
     let scrollDistance = $(window).scrollTop();
@@ -9,7 +8,7 @@ $(document).ready(function() {
             $(el).removeClass("menu li a");
           }
         });
-        $('nav li:eq('+ i +')').find('a').addClass('menu li a');
+        $('nav li:eq(' + i + ')').find('a').addClass('menu li a');
       }
     });
   });
@@ -36,7 +35,7 @@ console.log(Adaptability);
 let sum = 0;
 
 
-let siteTypetwo = prompt("siteType", "a,b,c")
+/*let siteTypetwo = prompt("siteType", "a,b,c")
 if (siteTypetwo == "a") {
   sum = sum + 100;
 } else if (siteTypetwo == "b") {
@@ -73,4 +72,21 @@ $('a[href^="#"]').click(function() {
   $('html, body').animate({
     scrollTop: $(valHref).offset().top - 60 + "px"
   });
+});*/
+$(document).ready(function() {
+let options = {
+  threshold: [0.5]
+};
+let observer = new IntersectionObserver(onEntry, options);
+let elements = $('.element-animation');
+elements.each((i, el) => {
+  observer.observe(el);
 });
+});
+function onEntry (entry){
+  entry.forEach(change => {
+    if (change.isIntersecting){
+      change.target.classList.add('.animationShow')
+    }
+  });
+}
