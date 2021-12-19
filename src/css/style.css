@@ -47,7 +47,7 @@ nav {
 }
 
 .menu li a:visited {
-  color: white;
+color: white;
 }
 
 .menu li a:hover {
@@ -57,6 +57,10 @@ nav {
 .menu li a:active {
   transform: scale(1.1);
   color:#e88604;
+}
+.active:active {
+  color:#e88604;
+
 }
 
 .main {
@@ -370,7 +374,7 @@ to {
   background: black;
 }
 
-.a {
+.calculator {
   box-shadow: 2px 2px 2px 5px rgba(0, 0, 0, 0.1);
   background: white;
   padding: 10px;
@@ -380,13 +384,13 @@ to {
   margin-left: 370px;
 }
 
-.a h2 {
+.calculator h2 {
   text-align: center;
   margin-top font-size: 30px;
   font-weight: bold;
 }
 
-.a h3 {
+.calculator h3 {
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
@@ -394,7 +398,7 @@ to {
   margin-top: 50px;
 }
 
-.a input {
+.calculator input {
   color: white;
   border: 3px solid white;
   height: 40px;
@@ -411,12 +415,12 @@ to {
   animation-iteration-count: 3s;
 }
 
-.a input:hover {
+.calculator input:hover {
   color: white;
   background: black;
 }
 
-.a h4 {
+.calculator h4 {
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
@@ -424,7 +428,7 @@ to {
   margin-top: 50px;
 }
 
-.a h5 {
+.calculator h5 {
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
@@ -432,7 +436,7 @@ to {
   margin-top: 50px;
 }
 
-.a p {
+.calculator p {
   color: #1c2534;
   font-weight: bold;
 }
@@ -568,10 +572,19 @@ to {
 
 .element-animation{
   opacity: 0;
-
+  color: white;
+  border: 3px solid white;
+  height: 40px;
+  width: 150px;
+  text-align: center;
+  border-radius: 7px;
+  font-size: 13px;
+  padding: 7px;
+  background: none;
+  font-weight: bold;
 }
 
-.animationShow{
+.element-animation.animationShow{
   color: white;
   border: 3px solid white;
   height: 40px;
@@ -583,11 +596,13 @@ to {
   background: none;
   font-weight: bold;
   opacity: 1;
+  text-decoration: none;
   animation: pulse;
   animation-duration: 3s;
   animation-iteration-count: 3s;
 
 }
+
 /*
 .Contacts input{
   color: white;
@@ -621,10 +636,93 @@ to {
   padding-top: 30px;
 }
 .carousel-inner{
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 200px;
+  max-height: 200px;
 }
 .carouselExampleFade{
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.carousel-item img{
+  width: 100%;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 999;
+    -webkit-animation: fade .6s;
+    -moz-animation: fade .6s;
+    animation: fade .6s;
+    overflow: auto;
+}
+
+.popup {
+    top: 25%;
+    left: 0;
+    right: 0;
+    font-size: 14px;
+    margin: auto;
+    width: 85%;
+    min-width: 320px;
+    max-width: 600px;
+    position: absolute;
+    padding: 15px 20px;
+    border: 1px solid #383838;
+    background: #fefefe;
+    z-index: 1000;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    font: 14px/18px 'Tahoma', Arial, sans-serif;
+    -webkit-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -ms-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -webkit-animation: fade .6s;
+    -moz-animation: fade .6s;
+    animation: fade .6s;
+}
+.close {
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    border: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #243042;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    outline: none;
+
+}
+.close:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "X";
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.close:hover {
+    background-color: rgba(252, 20, 0, 0.8);
 }

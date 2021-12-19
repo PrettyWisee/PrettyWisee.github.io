@@ -4,11 +4,11 @@ $(document).ready(function() {
     $(".section").each((i, el) => {
       if ($(el).offset().top - $("nav").outerHeight() <= scrollDistance) {
         $("nav a").each((i, el) => {
-          if ($(el).hasClass("menu li a")) {
-            $(el).removeClass("menu li a");
+          if ($(el).hasClass("active")) {
+            $(el).removeClass("active");
           }
         });
-        $('nav li:eq(' + i + ')').find('a').addClass('menu li a');
+        $('nav li:eq(' + i + ')').find('a').addClass('active');
       }
     });
   });
@@ -35,12 +35,12 @@ console.log(Adaptability);
 let sum = 0;
 
 
-/*let siteTypetwo = prompt("siteType", "a,b,c")
-if (siteTypetwo == "a") {
+/*let siteTypetwo = "form-select"
+if (siteTypetwo == "One") {
   sum = sum + 100;
-} else if (siteTypetwo == "b") {
+} else if (siteTypetwo == "Two") {
   sum = sum + 50;
-} else if (siteTypetwo == "c") {
+} else if (siteTypetwo == "Three") {
   sum = sum + 10;
 };
 
@@ -66,13 +66,14 @@ if (AdaptabilityTwo == "a") {
 };
 
 console.log(sum);
-alert("Сумма =" + sum);
+alert("Сумма =" + sum);*/
+
 $('a[href^="#"]').click(function() {
   let valHref = $(this).attr("href");
   $('html, body').animate({
     scrollTop: $(valHref).offset().top - 60 + "px"
   });
-});*/
+});
 $(document).ready(function() {
 let options = {
   threshold: [0.5]
@@ -86,7 +87,43 @@ elements.each((i, el) => {
 function onEntry (entry){
   entry.forEach(change => {
     if (change.isIntersecting){
-      change.target.classList.add('.animationShow')
+      change.target.classList.add('animationShow')
     }
   });
 }
+$(document).ready(function() {
+  $('.image-link').magnificPopup({type:'image'});
+});
+(function ($) {
+  $(function () {
+
+        calculate();
+        jQuery('#calculator input, #calculator select').change(function() {
+            calculate();
+        });
+        jQuery('#calculator input').keyup(function() {
+            calculate();
+        });
+         total = 0;
+
+            switch (calcInputs.texture) {
+                case '1':
+            total += calcInputs.area * 113;
+            break;
+                case '2':
+            total += calcInputs.area * 180;
+            break;
+                case '3':
+            total += calcInputs.area * 180;
+            break;
+            default:
+            break;
+          };
+            total += ' руб.';
+    jQuery(this).find('p.total').html(total);
+});
+}
+
+});
+})(jQuery);
+;
