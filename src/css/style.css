@@ -726,3 +726,10 @@ to {
 .close:hover {
     background-color: rgba(252, 20, 0, 0.8);
 }
+.carousel-caption p{
+  color: black;
+}
+.carousel-item img{
+  width: 99px;
+  height: 102px;
+}
