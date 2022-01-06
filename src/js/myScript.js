@@ -1,3 +1,4 @@
+/*Anchor*/
 $(document).ready(function() {
   $(window).scroll(() => {
     let scrollDistance = $(window).scrollTop();
@@ -13,61 +14,9 @@ $(document).ready(function() {
     });
   });
 });
-
-var siteType = {
-  b: "a",
-  a: "b",
-  c: "c"
-};
-
-let Design = {
-  a: "a",
-  b: "b",
-  c: "c",
-};
-console.log(Design);
-let Adaptability = {
-  a: "a",
-  b: "b",
-  c: "c",
-};
-console.log(Adaptability);
+/*Anchor*/
 let sum = 0;
-
-
-/*let siteTypetwo = "form-select"
-if (siteTypetwo == "One") {
-  sum = sum + 100;
-} else if (siteTypetwo == "Two") {
-  sum = sum + 50;
-} else if (siteTypetwo == "Three") {
-  sum = sum + 10;
-};
-
-
-
-let DesignTwo = prompt("Design", "a,b,c")
-if (DesignTwo == "a") {
-  sum = sum + 300;
-} else if (DesignTwo == "b") {
-  sum = sum + 540;
-} else if (DesignTwo == "c") {
-  sum = sum + 170;
-};
-
-
-let AdaptabilityTwo = prompt("Adaptability", "1,2,3")
-if (AdaptabilityTwo == "a") {
-  sum = sum + 600;
-} else if (AdaptabilityTwo == "b") {
-  sum = sum + 940;
-} else if (AdaptabilityTwo == "c") {
-  sum = sum + 270;
-};
-
-console.log(sum);
-alert("Сумма =" + sum);*/
-
+/*Discount*/
 $('a[href^="#"]').click(function() {
   let valHref = $(this).attr("href");
   $('html, body').animate({
@@ -94,7 +43,8 @@ function onEntry (entry){
 $(document).ready(function() {
   $('.image-link').magnificPopup({type:'image'});
 });
-(function ($) {
+/*Discount*/
+/*(function ($) {
   $(function () {
 
         calculate();
@@ -126,4 +76,33 @@ $(document).ready(function() {
 
 });
 })(jQuery);
-;
+;*/
+//Kalkulator 2.0
+var Type,
+    Price,
+    Total;
+
+    Total = $('#totalPrice')
+    Price = 0;
+
+function calculatePrice(){
+  var PriceType = $('select[name=Type]: selekted','#calculator').val();
+  var PriceDesign = $('select[name=Design]: selekted','#calculator').val();
+  var PriceAdaptability = $('select[name=Adaptability]: selekted','#calculator').val();
+
+  PriceType = parseInt(PriceType);
+  PriceDesign = parseInt(PriceDesign);
+  PriceAdaptability = parseInt(PriceAdaptability);
+
+  Price = PriceType + PriceDesign + PriceAdaptability;
+  alert(calculatePrice);
+
+Total.text(Price);
+};
+
+
+
+$('#calculator select').on('change',function(){
+calculatePrice();
+});
+//Kalkulator 2.0

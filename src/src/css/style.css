@@ -1,73 +1,4 @@
 
-.preloader {
-
-  position: fixed;
-
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-
-  background: #e0e0e0;
-
-  z-index: 1001;
-}
-
-.preloader__row {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  width: 70px;
-  height: 70px;
-  margin-top: -35px;
-  margin-left: -35px;
-  text-align: center;
-  animation: preloader-rotate 2s infinite linear;
-}
-
-.preloader__item {
-  position: absolute;
-  display: inline-block;
-  top: 0;
-  background-color: #337ab7;
-  border-radius: 100%;
-  width: 35px;
-  height: 35px;
-  animation: preloader-bounce 2s infinite ease-in-out;
-}
-
-.preloader__item:last-child {
-  top: auto;
-  bottom: 0;
-  animation-delay: -1s;
-}
-
-@keyframes preloader-rotate {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes preloader-bounce {
-
-  0%,
-  100% {
-    transform: scale(0);
-  }
-
-  50% {
-    transform: scale(1);
-  }
-}
-
-.loaded_hiding .preloader {
-  transition: 0.3s opacity;
-  opacity: 0;
-}
-
-.loaded .preloader {
-  display: none;
-}
 body {
   font-family: Arial, sans-serif;
 }
@@ -269,6 +200,7 @@ transform: scale(1.1);
 .My_skills  {
   box-shadow: white;
   height: 505px;
+  width: 100%;
   background:url("../img/Черта-заголовка.png") 50% 10% no-repeat,url("../img/картинка фона.png") no-repeat;
 
 }
@@ -339,7 +271,6 @@ padding-bottom: 100px
 
 }
 .My_skills4 p {
-  /* так же не знаю уже как его поднять на нужную высоту */
   font-weight: bold;
   color: #243042;
 
@@ -357,7 +288,7 @@ padding-bottom: 100px
 .Cases p {
 text-align: center;
 color: #3f495a;
-background: url("../img/фотка 2.png") 50% 50% no-repeat; /* Тут тоже из за разрешения екрана встало криво?*/
+background: url("../img/фотка 2.png") 50% 50% no-repeat;
 box-shadow: white;
 height: 860px;
 }
@@ -402,7 +333,7 @@ color: #384354;
   color: #384354;
 }
 .b a {
-  margin-left: 400px; /* Тоже подогнать по размерам не могу*/
+  margin-left: 400px;
   margin-top: 60px;
   color: white;
   border: 3px solid white;
@@ -543,4 +474,46 @@ margin-bottom: 200px;
   text-align: center;
   color: white;
   padding-top: 30px;
+}
+
+.carousel-item img{
+ width: auto;
+ height: 245px;
+ max-height: 245px;
+ margin: auto;
+ display: block;
+ }
+ .section2{
+   max-width: 1200px;
+ }
+ .container {
+   max-width: 1200px;
+   margin: 0px;
+   padding: 0px 15px;
+ }
+ @media (max-width:1200px) {
+ .container {
+   max-width: 970px;
+ }
+ }
+ @media (max-width:992px) {
+ .container {
+   max-width: 750px;
+ }
+ }
+ @media (max-width:768px) {
+ .container {
+   max-width: none;
+ }
+ }
+ @media only creen and (max-width: 1400px){
+   .title_container{
+     max-width: 100px;
+   }
+ }
+.map{
+  max-width: 1200px;
+}
+.END{
+  max-width: 1200px;
 }
