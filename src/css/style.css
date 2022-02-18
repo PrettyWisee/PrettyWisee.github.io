@@ -379,9 +379,9 @@ to {
   background: white;
   padding: 10px;
   margin-top: 150px;
-  width: 775px;
+
   height: 550px;
-  margin-left: 370px;
+
 }
 
 .calculator h2 {
@@ -409,7 +409,7 @@ to {
   padding: 7px;
   background-color: #63b5ae;
   font-weight: bold;
-  margin-left: 290px;
+
   animation: pulse;
   animation-duration: 3s;
   animation-iteration-count: 3s;
@@ -635,10 +635,7 @@ to {
   color: white;
   padding-top: 30px;
 }
-.carousel-inner{
-  max-width: 200px;
-  max-height: 200px;
-}
+
 .carouselExampleFade{
   max-width: 200px;
   max-height: 200px;
@@ -732,4 +729,25 @@ to {
 .carousel-item img{
   width: 99px;
   height: 102px;
+}
+@media screen and (max-width: 1400px)  {
+.container h-100{
+  display: block;
+  margin-bottom: 50px;
+}
+}
+.carousel-item active{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.carousel-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.carouselExampleCaptions{
+  width: 500px;
 }
